@@ -94,7 +94,13 @@ mock-gallery-saver/
 
 ## セットアップ
 
-（準備中）
+### Gallery
+```bash
+docker compose build
+docker compose run --rm web bin/rails db:prepare
+docker compose up
+```
+http://localhost:3000 で起動します。
 
 ## ロードマップ
 

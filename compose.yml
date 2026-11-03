@@ -1,0 +1,37 @@
+# リポジトリのルートに置く（Railsアプリ本体は gallery/ にある）
+services:
+  db:
+    image: postgres:18
+    environment:
+      POSTGRES_PASSWORD: password
+    volumes:
+      # DBのデータを消えないように保存する場所
+      # （PostgreSQL 18以降は /var/lib/postgresql に置くのが公式の推奨）
+      - postgres_data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  web:
+    build: ./gallery                  # gallery/Dockerfile を使ってビルド
+    command: bash -c "rm -f tmp/pids/server.pid && bin/dev"
+    tty: true                         # Tailwindの監視（tailwindcss:watch）がすぐ終了しないようにする
+    volumes:
+      - ./gallery:/app                # gallery/ のコードをコンテナと共有（編集がすぐ反映される）
+      - bundle_data:/usr/local/bundle # インストール済みGemを保存
+    ports:
+      - "3000:3000"                   # Mac側:コンテナ側
+    environment:
+      BINDING: 0.0.0.0
+      DATABASE_HOST: db               # 「db」というサービス名でDBに接続できる
+      DATABASE_USER: postgres
+      DATABASE_PASSWORD: password
+    depends_on:
+      db:
+        condition: service_healthy    # DBの準備ができてから起動
+
+volumes:
+  postgres_data:
+  bundle_data:
