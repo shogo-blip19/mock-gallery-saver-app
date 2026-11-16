@@ -1,0 +1,122 @@
+[
+  {
+    "file": "01.png",
+    "prompt": "sunset sky over a calm sea, warm orange gradient, flat illustration",
+    "seed": 3322187616,
+    "ai_model": "mock-diffusion-v2"
+  },
+  {
+    "file": "02.png",
+    "prompt": "deep ocean waves, blue gradient, soft light, watercolor",
+    "seed": 299763626,
+    "ai_model": "mock-diffusion-v2"
+  },
+  {
+    "file": "03.png",
+    "prompt": "misty forest at dawn, green tones, watercolor",
+    "seed": 1496830822,
+    "ai_model": "toy-xl"
+  },
+  {
+    "file": "04.png",
+    "prompt": "lavender field, dreamy purple atmosphere, minimalist",
+    "seed": 1480210660,
+    "ai_model": "mock-diffusion-v1"
+  },
+  {
+    "file": "05.png",
+    "prompt": "pastel candy shop, pink and yellow, watercolor",
+    "seed": 1165940155,
+    "ai_model": "mock-diffusion-v2"
+  },
+  {
+    "file": "06.png",
+    "prompt": "starry night sky, deep navy, glowing orbs, soft focus",
+    "seed": 2615845363,
+    "ai_model": "mock-diffusion-v1"
+  },
+  {
+    "file": "07.png",
+    "prompt": "desert dunes at noon, sand colors, flat illustration",
+    "seed": 3362660508,
+    "ai_model": "mock-diffusion-v2"
+  },
+  {
+    "file": "08.png",
+    "prompt": "mint ice cream, fresh and clean, digital painting",
+    "seed": 2877134561,
+    "ai_model": "mock-diffusion-v2"
+  },
+  {
+    "file": "09.png",
+    "prompt": "glowing embers in the dark, fire tones, watercolor",
+    "seed": 885807955,
+    "ai_model": "mock-diffusion-v2"
+  },
+  {
+    "file": "10.png",
+    "prompt": "glacier cave, icy blue light, soft focus",
+    "seed": 2604018920,
+    "ai_model": "toy-xl"
+  },
+  {
+    "file": "11.png",
+    "prompt": "sunset sky over a calm sea, warm orange gradient, watercolor",
+    "seed": 3261062566,
+    "ai_model": "mock-diffusion-v1"
+  },
+  {
+    "file": "12.png",
+    "prompt": "deep ocean waves, blue gradient, soft light, flat illustration",
+    "seed": 938073954,
+    "ai_model": "mock-diffusion-v1"
+  },
+  {
+    "file": "13.png",
+    "prompt": "misty forest at dawn, green tones, minimalist",
+    "seed": 1097970875,
+    "ai_model": "toy-xl"
+  },
+  {
+    "file": "14.png",
+    "prompt": "lavender field, dreamy purple atmosphere, soft focus",
+    "seed": 1396136285,
+    "ai_model": "toy-xl"
+  },
+  {
+    "file": "15.png",
+    "prompt": "pastel candy shop, pink and yellow, watercolor",
+    "seed": 2072847658,
+    "ai_model": "mock-diffusion-v1"
+  },
+  {
+    "file": "16.png",
+    "prompt": "starry night sky, deep navy, glowing orbs, minimalist",
+    "seed": 158684674,
+    "ai_model": "mock-diffusion-v2"
+  },
+  {
+    "file": "17.png",
+    "prompt": "desert dunes at noon, sand colors, soft focus",
+    "seed": 1523331644,
+    "ai_model": "mock-diffusion-v2"
+  },
+  {
+    "file": "18.png",
+    "prompt": "mint ice cream, fresh and clean, flat illustration",
+    "seed": 4250454186,
+    "ai_model": "toy-xl"
+  },
+  {
+    "file": "19.png",
+    "prompt": "glowing embers in the dark, fire tones, watercolor",
+    "seed": 3074657250,
+    "ai_model": "mock-diffusion-v2"
+  },
+  {
+    "file": "20.png",
+    "prompt": "glacier cave, icy blue light, minimalist",
+    "seed": 2077003318,
+    "ai_model": "mock-diffusion-v1"
+  }
+]
