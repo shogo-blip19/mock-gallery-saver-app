@@ -7,7 +7,7 @@ FROM ruby:3.3
 #  libyaml-dev     : psych Gemに必要
 RUN apt-get update -qq && \
     apt-get install -y --no-install-recommends \
-      build-essential libpq-dev libyaml-dev git curl && \
+           build-essential libpq-dev libyaml-dev git curl libvips && \
     rm -rf /var/lib/apt/lists/*
 
 # コンテナ内の作業ディレクトリ

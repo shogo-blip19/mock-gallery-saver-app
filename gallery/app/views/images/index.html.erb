@@ -1,0 +1,37 @@
+<div class="w-full">
+  <h1 class="text-2xl font-bold mb-6">Mock AI Gallery</h1>
+
+  <% if @images.empty? %>
+    <p class="text-gray-500">
+      画像がまだありません。<code>bin/rails db:seed</code> でダミー画像を登録してください。
+    </p>
+  <% else %>
+    <%# id="gallery" と class="gallery-item" は、拡張機能が画像を見つけるための目印 %>
+    <div id="gallery" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+      <% @images.each do |image| %>
+        <%# data-* 属性に、拡張機能が使う情報を埋め込んでおく %>
+        <article class="gallery-item overflow-hidden rounded-lg bg-white shadow"
+                 data-image-id="<%= image.id %>"
+                 data-original-url="<%= url_for(image.file) %>">
+
+          <%# サムネイルをクリックすると、元の大きな画像を新しいタブで開く %>
+          <%= link_to url_for(image.file), target: "_blank", rel: "noopener" do %>
+            <%= image_tag image.file.variant(:thumb),
+                          alt: image.prompt,
+                          loading: "lazy",
+                          class: "aspect-square w-full object-cover" %>
+          <% end %>
+
+          <div class="p-3 text-sm">
+            <%# line-clamp-2 : 長いプロンプトは2行で省略。title でマウスを乗せると全文が出る %>
+            <p class="line-clamp-2 text-gray-800" title="<%= image.prompt %>"><%= image.prompt %></p>
+            <dl class="mt-2 space-y-1 text-xs text-gray-500">
+              <div><dt class="inline">seed:</dt> <dd class="inline"><%= image.seed %></dd></div>
+              <div><dt class="inline">model:</dt> <dd class="inline"><%= image.ai_model %></dd></div>
+            </dl>
+          </div>
+        </article>
+      <% end %>
+    </div>
+  <% end %>
+</div>
