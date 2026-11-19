@@ -15,4 +15,9 @@ Rails.application.routes.draw do
   root "images#index"
 
 
+  namespace :api do
+    resources :images, only: [:index]
+  end
+
+
 end
