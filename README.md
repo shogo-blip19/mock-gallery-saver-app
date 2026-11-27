@@ -94,6 +94,13 @@ mock-gallery-saver/
 
 ## セットアップ
 
+### Extension
+```bash
+cd extension
+npm install
+npm run dev
+```
+拡張機能が読み込まれた Chrome が自動で起動します。
 ### Gallery
 ```bash
 docker compose build
